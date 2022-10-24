@@ -1,7 +1,4 @@
 import java.time.LocalDate;
-import java.util.Set;
-
-import javax.print.event.PrintEvent;
 
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Mentoria;
@@ -20,7 +17,7 @@ public class App {
 
         Mentoria mentoria1 = new Mentoria();
         mentoria1.setData(LocalDate.now());
-        mentoria1.setDescricao("este curso é sobre JAVA");
+        mentoria1.setDescricao("Essa mentoria é sobre JAVA");
         mentoria1.setTitulo("Java");
 
         System.out.println(curso1 + "\n" + curso2 + "\n" + mentoria1);
