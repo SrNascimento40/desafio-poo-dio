@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 
+import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
 public class App {
@@ -20,6 +22,21 @@ public class App {
         mentoria1.setDescricao("Essa mentoria é sobre JAVA");
         mentoria1.setTitulo("Java");
 
-        System.out.println(curso1 + "\n" + curso2 + "\n" + mentoria1);
+        Bootcamp bootcamp = new Bootcamp();
+
+        bootcamp.setNome("Bootcamp Jaca developer");
+        bootcamp.setDescricao("bootcamp pra aprender Java");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
+
+        Dev Nascimento = new Dev();
+        Nascimento.setNome("nascimento");
+        Nascimento.inscreverBootcamp(bootcamp);
+        Nascimento.progredir();
+        System.out.println("\nConteúdos inscritos" + Nascimento.getConteudosInscritos() + "\n");
+        System.out.println("Conteúdos concluídos" + Nascimento.getConteudosConcluidos() + "\n\n");
+
+        System.out.println("XP: " +  Nascimento.calcularTotalXp());
     }
 }

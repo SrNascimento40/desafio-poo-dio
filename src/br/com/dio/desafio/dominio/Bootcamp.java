@@ -63,7 +63,7 @@ public class Bootcamp {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome,descricao, dataInicial, dataFinal, devsInscritos, conteudos);
+        return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
 
 }
